@@ -1,0 +1,25 @@
+{
+  "name": "stream-snitch",
+  "homepage": "http://github.com/dmotz/stream-snitch",
+  "author": {
+    "name": "Dan Motzenbecker",
+    "url": "http://oxism.com",
+    "email": "dan@oxism.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/dmotz/stream-snitch.git"
+  },
+  "description": "Event emitter for watching text streams with regex patterns",
+  "keywords": [
+    "stream",
+    "grep",
+    "regex",
+    "match",
+    "search"
+  ],
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=0.10.x"
+  }
+}

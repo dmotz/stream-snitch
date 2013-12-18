@@ -8,7 +8,8 @@
 
 stream-snitch is a tiny Node module that allows you to match streaming data
 patterns with regular expressions. It's much like `... | grep`, but for Node
-streams using native events and regular expression objects.
+streams using native events and regular expression objects. It's also a good
+introduction to the benefits of streams if you're unconvinced or unintroduced.
 
 
 ### Use Cases

@@ -126,6 +126,9 @@ if you anticipate a very large capture size:
 new StreamSnitch(/.../g, { bufferCap: 1024 * 1024 * 20 });
 ```
 
+If you want to reuse a stream-snitch instance after one stream ends, you can
+manually call the `clearBuffer()` method.
+
 It should be obvious, but remember to use the `m` (multiline) flag in your patterns
 if you're using the `$` operator for looking at endings on a line by line basis.
 If you're legitimately looking for a pattern at the end of a document, stream-snitch

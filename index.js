@@ -37,7 +37,7 @@ inherits(StreamSnitch, Writable);
 StreamSnitch.prototype._write = function(chunk, encoding, cb) {
   var match, lastMatch;
 
-  if (Buffer.byteLength(this._buffer) > this.bufferCap) this._buffer = '';
+  if (Buffer.byteLength(this._buffer) > this.bufferCap) this.clearBuffer();
 
   this._buffer += chunk;
 
@@ -52,5 +52,11 @@ StreamSnitch.prototype._write = function(chunk, encoding, cb) {
 
   cb();
 
+}
+
+
+StreamSnitch.prototype.clearBuffer = function() {
+  this._buffer = '';
+  return this;
 }
 

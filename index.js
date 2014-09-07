@@ -50,6 +50,10 @@ StreamSnitch.prototype._write = function(chunk, encoding, cb) {
     this._buffer = this._buffer.slice(lastMatch.index + lastMatch[0].length);
   }
 
+  if (this.regex.multiline) {
+    this._buffer = this._buffer.slice(this._buffer.lastIndexOf('\n'));
+  }
+
   cb();
 
 }

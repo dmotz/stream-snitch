@@ -110,8 +110,9 @@ rather than more efficient procedural parsing. The first consequence of this is
 that it only supports streams of text and will decode binary buffers automatically.
 
 Since it offers support for any arbitrary regular expressions including capture
-groups and start/end operators, chunks are internally buffered and examined and
-discarded only when matches are found.
+groups and start / end operators, chunks are internally buffered and examined and
+discarded only when matches are found. When given a regular expression in
+multiline mode (`/m`), the buffer is cleared at the start of every newline.
 
 stream-snitch will periodically clear its internal buffer if it grows too large,
 which could occur if no matches are found over a large amount of data or you use

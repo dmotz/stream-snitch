@@ -44,6 +44,9 @@ StreamSnitch.prototype._write = function(chunk, encoding, cb) {
   while (match = this.regex.exec(this._buffer)) {
     this.emit('match', match);
     lastMatch = match;
+    if (!this.regex.global) {
+      break;
+    }
   }
 
   if (lastMatch) {
@@ -63,4 +66,3 @@ StreamSnitch.prototype.clearBuffer = function() {
   this._buffer = '';
   return this;
 }
-
